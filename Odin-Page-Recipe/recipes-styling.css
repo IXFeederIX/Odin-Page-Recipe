@@ -5,6 +5,7 @@ body{
     margin:0;
     padding:0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: scroll;
 }
 .boton{
     display: inline-flex;
@@ -42,7 +43,7 @@ body{
     background-image: url("burguer.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    position:fixed;
+    background-attachment: fixed; 
 }
 .container{
     background-color: whitesmoke;
@@ -106,9 +107,12 @@ body{
     transform: none;
     }
     } 
-    article{
+    .app{
         background-color: whitesmoke;
-        position: flexbox;
+        height: 50em;
+        display: block;
+        margin: 25px 25px;
+        box-shadow: -3px 5px 50px 0px rgba(0,0,0,0.75);
     }
     .box{
         width:45%;
@@ -116,36 +120,53 @@ body{
         margin: 1em;
         background-color:white;
         border-radius: 0px 71px 67px 67px;
+        display: flex;
+
     }
     .box-text{
         text-align: center;
         margin: 10px 10px;
         padding: 35px 30px;
         font-family: 'Be Vietnam Pro', sans-serif;
+
     }
  h2{
     text-align: center;
+    padding: 50px 50px;
  }
  
  .Comida{
     list-style-type: none;
     display: inline-block;
     padding: 15px 15px;
-    border: 1px solid black;
-    border-radius: 15px;
-    background-color: rgb(5, 3, 14);
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
  }
+ .Comida:hover{
+    list-style-type: none;
+    display: inline-block;
+    padding: 15px 15px;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    background-color: darkgray;
+    color: whitesmoke;
+}
 .Menu-Comida{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+    z-index: -5;
 }
 .comida-link{
-    color: whitesmoke;
+    color: black;
     text-decoration: none;
     font-family: 'Be Vietnam Pro', sans-serif;
+    text-align: center;
 }
-i{
-    color: whitesmoke;
-    padding-right: 5px;
+.icon-selector{
+    color: black;
+}
+h3{
+    text-align: center;
+
 }
