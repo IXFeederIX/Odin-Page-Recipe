@@ -192,3 +192,8 @@ font-family: 'Be Vietnam Pro', sans-serif;
       width: 45%; 
     }
   }
+  footer{
+    text-align:center;
+    background-color:whitesmoke;
+    width: 100%;
+  }
