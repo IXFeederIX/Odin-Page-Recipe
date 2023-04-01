@@ -2,6 +2,7 @@
 let fondo = document.body;
 descripcion = document.querySelector(".box-text");
 menu = document.querySelector(".Menu-Comida");
+
   menu.childNodes.forEach(element => {
     element.addEventListener("mouseover",(e)=>{
         fondo.style.transition = "all 1s";
