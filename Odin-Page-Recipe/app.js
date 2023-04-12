@@ -10,6 +10,7 @@ alerta = document.querySelector(".Alert");
 hideBar = document.querySelector(".hide")
 articulos = document.querySelector(".articulos");
 tabla = document.querySelector(".nutricion");
+ingredientes = document.querySelector(".lista-ingredientes")
 ////// categoriaas + recetas
 const menuDeComida = [{
   categoria: "<i class='fa-solid fa-burger icon-selector'></i> Hamburguesa",
@@ -22,20 +23,53 @@ const menuDeComida = [{
       descripcion:"Una Hamburguesa Sencilla Muy Facil de Hacer, ¡Especialmente si eres una persona con poco Tiempo!", 
       valorNutricional: [
         { nombre: "Calorías", cantidad: 400 },
-        { nombre: "Grasas", cantidad: 20 },
-        { nombre: "Proteínas", cantidad: 25 },
-        { nombre: "Carbohidratos", cantidad: 30 }
-      ]
-    },
+        { nombre: "Grasas", cantidad: "20g" },
+        { nombre: "Proteínas", cantidad: "25gr" },
+        { nombre: "Carbohidratos", cantidad: "30g" }
+      ],
+      ingredientes:[
+          {lista: '500 gramos de carne molida de res'},
+          {lista: '1 cebolla pequeña picada finamente'},
+          {lista: '1 huevo'},
+          {lista: '1/2 taza de pan rallado'},
+          {lista: '1 cucharadita de sal'},
+          {lista: '1/2 cucharadita de pimienta negra molida'},
+          {lista: '4 panes de hamburguesa'},
+          {lista: 'Lechuga'},
+          {lista: 'Tomate'},
+          {lista: 'Cebolla y otros aderezos al gusto'}
+      ],
+        },
     {
       platillo: "Hamburguesa de Pollo",
       imagen:"imagenes-recetas/Hamburguesas/1.png",
       descripcion: "¡Si no te gustan las carnes Rojas, esta Hamburguesa de Pollo te Dejara Alucinando!",
       valorNutricional: [
         { nombre: "Calorías", cantidad: 350 },
-        { nombre: "Grasas", cantidad: 15 },
-        { nombre: "Proteínas", cantidad: 20 },
-        { nombre: "Carbohidratos", cantidad: 35 }
+        { nombre: "Grasas", cantidad: "15g" },
+        { nombre: "Proteínas", cantidad: "20gr" },
+        { nombre: "Carbohidratos", cantidad: "35g" }
+      ],
+      ingredientes:[
+        {lista: '500 gramos de carne molida de pollo'},
+        {lista: '1/2 taza de pan rallado'},
+        {lista: '1 cebolla pequeña, picada finamente'},
+        {lista: '1 cucharada de perejil fresco picado'},
+        {lista: '1 cucharadita de páprika'},
+        {lista: '1/2 cucharadita de ajo en polvo'},
+        {lista: '1/2 cucharadita de sal'},
+        {lista: '1/4 cucharadita de pimienta negra'},
+        {lista: '4 panes de hamburguesa'},
+        {lista: 'Lechuga'},
+        {lista: 'Tomate'},
+        {lista: 'Cualquier otro aderezo deseado'}
+      ],
+      contenido:[
+        'En un tazón grande, mezcla la carne molida de pollo, el pan rallado, la cebolla, el perejil, la páprika, el ajo en polvo, la sal y la pimienta negra hasta que estén bien combinados.',
+        'Divide la mezcla en cuatro porciones iguales y forma cada una en una hamburguesa.',
+        'Calienta una sartén grande a fuego medio-alto. Añade las hamburguesas de pollo a la sartén y cocínalas durante 5-6 minutos por cada lado, o hasta que estén completamente cocidas.',
+        'Tuesta los panes de hamburguesa en una tostadora o en el horno.',
+        'Arma las hamburguesas colocando las hamburguesas de pollo en los panes inferiores, seguidas de lechuga, tomate y cualquier otro aderezo deseado. Cubre con los panes superiores y sirve inmediatamente.'
       ]
     },
 {
@@ -44,11 +78,28 @@ const menuDeComida = [{
   descripcion: "¿Eres vegetariano?, ¡Te tenemos cubierto con esta increible Hamburguesa Vegetariana",
   valorNutricional: [
     { nombre: "Calorías", cantidad: 300 },
-    { nombre: "Grasas", cantidad: 10 },
-    { nombre: "Proteínas", cantidad: 15 },
-    { nombre: "Carbohidratos", cantidad: 40 }
+    { nombre: "Grasas", cantidad: "10g" },
+    { nombre: "Proteínas", cantidad: "15gr" },
+    { nombre: "Carbohidratos", cantidad: "40g" }
+  ],
+  ingredientes:[
+    {lista: '1 lata de frijoles negros, escurridos y enjuagados'},
+    {lista: '1/2 cebolla picada'},
+    {lista: '1/2 taza de pan rallado'},
+    {lista: '1/4 taza de harina de garbanzo'},
+    {lista: '1 cucharadita de comino molido'},
+    {lista: '1/2 cucharadita de sal'},
+    {lista: '1/4 cucharadita de pimienta negra molida'},
+    {lista: '1/2 taza de zanahoria rallada'},
+    {lista: '1/2 taza de espinaca fresca picada'},
+    {lista: '1 diente de ajo picado'},
+    {lista: '4 panes de hamburguesa'},
+    {lista: 'Lechuga'},
+    {lista: 'Tomate'},
+    {lista: 'Cualquier otro aderezo deseado'}
   ]
-}
+  },
+  
   ],
 },
 {
@@ -61,10 +112,21 @@ recetas:[
     imagen:"imagenes-recetas/Pizza/0.png",
     descripcion: "Pizza Napolitana, un clasico en los restaurantes italianos ¿estas dispuesto a probar esta receta en tu casa?",
     valorNutricional: [
-      { nombre: "Calorías", cantidad: 250 },
-      { nombre: "Grasas", cantidad: 10 },
-      { nombre: "Proteínas", cantidad: 12 },
-      { nombre: "Carbohidratos", cantidad: 30 }
+      { nombre: "Calorías", cantidad: 250},
+      { nombre: "Grasas", cantidad: "10g" },
+      { nombre: "Proteínas", cantidad: "12g" },
+      { nombre: "Carbohidratos", cantidad: "30g" }
+    ],
+    ingredientes:[
+{lista:'500 gramos de harina de trigo'},
+{lista:'325 ml de agua'},
+{lista:'10 gramos de levadura fresca'},
+{lista:'10 gramos de sal'},
+{lista:'1 cucharada de aceite de oliva'},
+{lista:'400 gramos de tomate triturado'},
+{lista:'200 gramos de mozzarella'},
+{lista:'Unas hojas de albahaca fresca'},
+{lista:'Sal y pimienta negra recién molida'}
     ]
   },
   {
@@ -73,9 +135,18 @@ recetas:[
     descripcion:"¡una Pizza con Piña! un gusto bastante peculiar para la gente que le gusta el contraste de sabores",
     valorNutricional: [
       { nombre: "Calorías", cantidad: 300 },
-      { nombre: "Grasas", cantidad: 12 },
-      { nombre: "Proteínas", cantidad: 10 },
-      { nombre: "Carbohidratos", cantidad: 35 }
+      { nombre: "Grasas", cantidad: "12g" },
+      { nombre: "Proteínas", cantidad: "10gr" },
+      { nombre: "Carbohidratos", cantidad: "35g" }
+    ],
+    ingredientes:[
+  {lista:'500 gramos de masa para pizza'},
+  {lista:'1 taza de salsa de tomate'},
+  {lista:'2 tazas de queso mozzarella rallado'},
+  {lista:'1 taza de jamón cocido picado'},
+  {lista:'1 taza de piña en trozos'},
+  {lista:'1/4 taza de salsa BBQ'},
+  {lista:'Hojas de albahaca fresca para decorar (opcional)'}
     ]
   },
   {
@@ -84,9 +155,19 @@ recetas:[
     descripcion:"Pepperoni, Combinando Varios Sabore atractivos, para el disguto de los amantes de la comida",
     valorNutricional: [
       { nombre: "Calorías", cantidad: 350 },
-      { nombre: "Grasas", cantidad: 18 },
-      { nombre: "Proteínas", cantidad: 14 },
-      { nombre: "Carbohidratos", cantidad: 30 }
+      { nombre: "Grasas", cantidad: "18g" },
+      { nombre: "Proteínas", cantidad: "14gr" },
+      { nombre: "Carbohidratos", cantidad: "30g" }
+    ],
+    ingredientes:[
+  {lista:'500 gramos de masa para pizza'},
+  {lista:'1 taza de salsa de tomate'},
+  {lista:'2 tazas de queso mozzarella rallado'},
+  {lista:'100 gramos de pepperoni en rodajas'},
+  {lista:'chile jalapeño en rodajas (sin semillas si lo prefieres menos picante)'},
+  {lista:'1 tomate grande maduro picado'},
+  {lista:'1 cucharadita de orégano seco'},
+  {lista:'Hojas de albahaca fresca para decorar (opcional)'}
     ]
   }
 ],  
@@ -103,9 +184,18 @@ recetas:[
       descripcion: "Pasta Alfredo: es un plato de fettuccine con mantequilla y queso parmesano. En su versión original no lleva más nada. Se hace muy rápido y es deliciosa.",
       valorNutricional: [
         { nombre: "Calorías", cantidad: 500 },
-        { nombre: "Grasas", cantidad: 20 },
-        { nombre: "Proteínas", cantidad: 12 },
-        { nombre: "Carbohidratos", cantidad: 60 }
+        { nombre: "Grasas", cantidad: "20g" },
+        { nombre: "Proteínas", cantidad: "12gr" },
+        { nombre: "Carbohidratos", cantidad: "60g" }
+      ],
+      ingredientes:[
+        {lista:'500 gramos de pasta (fettuccine)'},
+  {lista:'1 taza de crema de leche'},
+  {lista:'1 taza de queso parmesano rallado'},
+  {lista:'4 cucharadas de mantequilla sin sal'},
+  {lista:'lidientes de ajo picados'},
+  {lista:'Sal y pimienta negra recién molida'},
+  {lista:'Hojas de perejil fresco picado para decorar (opcional)'},
       ]
     },
     {
@@ -114,9 +204,21 @@ recetas:[
       descripcion:"Una Receta Personalizada A nuestro gusto, para los amantes de la pasta, ¡No te decepcionaras!",
       valorNutricional: [
         { nombre: "Calorías", cantidad: 450 },
-        { nombre: "Grasas", cantidad: 15 },
-        { nombre: "Proteínas", cantidad: 10 },
-        { nombre: "Carbohidratos", cantidad: 65 }
+        { nombre: "Grasas", cantidad: "15g" },
+        { nombre: "Proteínas", cantidad: "10gr" },
+        { nombre: "Carbohidratos", cantidad: "65g" }
+      ],
+      ingredientes:[
+  {lista:'500 gramos de spaghetti'},
+  {lista:'Queso parmesano rallado para servir'},
+  {lista:'Hojas de albahaca fresca para decorar (opcional)'},
+  {lista: 'cucharadas de aceite de oliva'},
+  {lista:'1 cebolla picada'},
+  {lista:'2 dientes de ajo picados'},
+  {lista:'2 latas de tomates pelados (800 gramos)'},
+  {lista:'1/2 taza de vino tinto'},
+  {lista:'1 cucharadita de orégano seco'},
+  {lista:'Sal y pimienta negra recién molida'}
       ]
     },
     {
@@ -133,12 +235,8 @@ recetas:[
 ],
 
 },
-{
-  categoria:"<i class='fa-solid fa-star icon-selector'></i>Favoritos",
-  fondo:"url('logo.png')",
-  descripcion:"En esta seccion puedes Añadir tus Recetas Favoritas :)",
-  recetas:[] 
-}
+
+
 ] 
 
 function disableEnterKey(event) {
@@ -209,15 +307,30 @@ document.querySelectorAll(".menu-box").forEach(cajaDeMenu => {
       imagenArticulo.src = previousCajaDeMenu.childNodes[1].src
      
       if(previousCajaDeMenu.childNodes[0].innerText === receta.platillo){
+     
+
         tabla.innerText = ""
+        ingredientes.innerHTML = ""
+  receta.ingredientes.forEach(ingrediente=>{
+    const listaIngredientes = document.querySelector(".lista-ingredientes")
+   
+    const ingredientesContenido = document.createElement("li")
+    ingredientesContenido.innerText = ingrediente.lista
+    listaIngredientes.appendChild(ingredientesContenido)
+    ingredientesContenido.classList.add("lista-nutricional")
+  })
+        
         receta.valorNutricional.forEach(valor=>{
     const valorLista = document.querySelector(".nutricion")
   
     const valores = document.createElement("li")
   
     valores.innerText = valor.nombre + ": " + valor.cantidad
+    const tituloReceta = document.querySelector(".tituloReceta")
+    tituloReceta.innerText = "Receta Para " + previousCajaDeMenu.firstChild.innerText
     valorLista.appendChild(valores)
     valores.classList.add("lista-nutricional")
+
   })
  }
     });
