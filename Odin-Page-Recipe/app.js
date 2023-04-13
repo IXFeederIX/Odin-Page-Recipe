@@ -346,6 +346,23 @@ function disableEnterKey(event) {
     event.preventDefault();
   }
 }
+function mostrar() {
+  const recetaContainer = document.querySelector(".receta-escrita");
+  const misValores = document.querySelector(".receta-container");
+  const close = document.querySelector(".close-button");
+
+  recetaContainer.classList.remove("receta-escrita");
+  recetaContainer.classList.add("receta-escrita-responsiva");
+
+  close.addEventListener("click", () => {
+    recetaContainer.classList.add("receta-escrita");
+    recetaContainer.classList.remove("receta-escrita-responsiva");
+    misValores.style.display = "block";
+  });
+
+  close.style.display = "flex";
+  misValores.style.display = "none";
+}
 
   ////Cajas Contenedoras
   menuSeleccionado = document.querySelector(".Menu-Seleccionado")
