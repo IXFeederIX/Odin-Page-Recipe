@@ -15,11 +15,10 @@
           <i class="fa-solid fa-burger logoicon"></i>
           <h1>Eat.it</h1>
         </div>
-      <ul class="nav-container">
-      <li class="nav-Selector"> <a href="#" class="boton">Inicio</a> </li>
-        <li class="nav-Selector"> <a href="#" class="boton">Menu</a> </li>
-          <li class="nav-Selector"> <a href="#" class="boton">Contacto</a> </li>
-            <li class="nav-Selector"> <a href="#" class="boton">Servicios</a> </li>
+      <ul class="nav-container" id="nav">
+      <li class="nav-Selector"> <a href="#nav" class="boton">Inicio</a> </li>
+        <li class="nav-Selector"> <a href="#app" class="boton">Menu</a> </li>
+          <li class="nav-Selector"> <a href="#footer" class="boton">Contacto</a> </li>
     </ul>
         </nav>
       </header>
@@ -40,7 +39,7 @@
   <div class="Alert">
   <h3>Por Ahora no haz Selecionado Nada :(</h3>
   </div>
-  <div class="Menu-Seleccionado">
+  <div class="Menu-Seleccionado" id="Menu-Seleccionado">
     <div class="menu-box">
       <p class="receta"></p>
       <img class="imagen" src="">
@@ -52,10 +51,21 @@
 <h4 class="receta-titulo"></h4>
 <div class="receta-escrita">
   <h5 class="tituloReceta"></h5>
-<ul class="lista-ingredientes">
+  
+  <ul class="lista-ingredientes">
 
   
 </ul>
+<div class="recetaTexto">
+  <img src="">
+  </div>
+ <div class="counter">
+  
+    <button class="previousPagina miboton" onclick="previousPagina()"><</button>
+    <p class="paginaCounter">1/2</p>
+    <button class="nextPagina miboton" onclick="nextPagina()">></button>
+  </div>
+  
 </div>
 <div class="receta-container">
   <img class="imagen-articulo" src="">
@@ -74,13 +84,14 @@
   <li class="lista-nutricional"></li>
   <li class="lista-nutricional"></li>
   </ul>
+
 </div>
 
 </div>
 </div>
 
   </article>
-  <footer>
+  <footer id="footer">
   
     <div class="footer-container">
       <div class="logo-container">

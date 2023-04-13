@@ -11,6 +11,7 @@ hideBar = document.querySelector(".hide")
 articulos = document.querySelector(".articulos");
 tabla = document.querySelector(".nutricion");
 ingredientes = document.querySelector(".lista-ingredientes")
+receta  = document.querySelector(".recetaTexto")
 ////// categoriaas + recetas
 const menuDeComida = [{
   categoria: "<i class='fa-solid fa-burger icon-selector'></i> Hamburguesa",
@@ -39,6 +40,14 @@ const menuDeComida = [{
           {lista: 'Tomate'},
           {lista: 'Cebolla y otros aderezos al gusto'}
       ],
+    contenido:[
+      'En un tazón grande, mezcla la carne molida, la cebolla picada, el huevo, el pan rallado, la sal y la pimienta negra molida. Mezcla todo bien con las manos hasta que estén bien combinados.',
+    'Divide la mezcla de carne en cuatro partes iguales y forma cada una en una bola. Presiona cada bola para formar una hamburguesa plana y redonda.',
+    'Calienta una sartén grande o una parrilla a fuego medio-alto. Añade las hamburguesas a la sartén o parrilla y cocínalas durante 3-4 minutos por cada lado, o hasta que estén doradas y bien cocidas.',
+    'Mientras tanto, tuesta los panes de hamburguesa en una tostadora o en el horno.',
+    'Cuando las hamburguesas estén cocidas, colócalas en los panes tostados y añade la lechuga, el tomate, la cebolla y cualquier otro aderezo que desees.',
+    '¡Y ya está! Una deliciosa hamburguesa sencilla lista para disfrutar.'
+    ]
         },
     {
       platillo: "Hamburguesa de Pollo",
@@ -97,7 +106,15 @@ const menuDeComida = [{
     {lista: 'Lechuga'},
     {lista: 'Tomate'},
     {lista: 'Cualquier otro aderezo deseado'}
-  ]
+  ],
+    contenido:['En un tazón grande, aplasta los frijoles negros con un tenedor.',
+'Agrega la cebolla picada, el pan rallado, la harina de garbanzo, el comino, la sal y la pimienta negra. Mezcla bien.',
+'Agrega la zanahoria rallada, la espinaca picada y el ajo. Mezcla bien hasta que todos los ingredientes estén combinados.',
+'Divide la mezcla en cuatro partes iguales y forma cada una en una hamburguesa.',
+'Calienta una sartén grande a fuego medio-alto. Añade las hamburguesas de frijoles negros a la sartén y cocínalas durante 4-5 minutos por cada lado, o hasta que estén doradas y bien cocidas.',
+'Tuesta los panes de hamburguesa en una tostadora o en el horno.',
+'Arma las hamburguesas colocando las hamburguesas de frijoles negros en los panes inferiores, seguidas de lechuga, tomate y cualquier otro aderezo deseado. Cubre con los panes superiores y sirve inmediatamente.'
+],
   },
   
   ],
@@ -127,7 +144,16 @@ recetas:[
 {lista:'200 gramos de mozzarella'},
 {lista:'Unas hojas de albahaca fresca'},
 {lista:'Sal y pimienta negra recién molida'}
-    ]
+    ],
+    contenido:[
+        'En un bol grande, mezcla la harina y la sal. Agrega el agua tibia y la levadura fresca desmenuzada. Mezcla todo con una cuchara de madera hasta que empiece a formarse una masa.',
+        'Amasa la masa sobre una superficie enharinada durante unos 10 minutos, hasta que quede suave y elástica. Coloca la masa en un bol ligeramente engrasado, cúbrelo con un paño húmedo y déjalo reposar durante al menos una hora en un lugar cálido y sin corrientes de aire.',
+        'Precalienta el horno a 250 grados Celsius. Coloca una bandeja de horno en el horno para que se caliente también.',
+        'Divide la masa en dos partes iguales. Estira cada una de las partes con un rodillo hasta que quede fina (alrededor de medio centímetro de grosor). Coloca cada base de pizza sobre papel de horno.',
+        'Extiende el tomate triturado sobre cada base de pizza, asegurándote de que quede bien repartido. Agrega la mozzarella cortada en trozos pequeños y las hojas de albahaca fresca. Salpimienta al gusto.',
+        'Saca la bandeja de horno caliente del horno y coloca una base de pizza sobre ella. Hornea durante unos 10-15 minutos o hasta que la base esté dorada y la mozzarella se haya derretido. Repite con la otra pizza.',
+        'Sirve caliente y disfruta de tu deliciosa pizza napolitana. ¡Buen provecho!',
+      ],
   },
   {
     platillo: "Pizza Hawaiana",
@@ -140,13 +166,24 @@ recetas:[
       { nombre: "Carbohidratos", cantidad: "35g" }
     ],
     ingredientes:[
-  {lista:'500 gramos de masa para pizza'},
-  {lista:'1 taza de salsa de tomate'},
-  {lista:'2 tazas de queso mozzarella rallado'},
-  {lista:'1 taza de jamón cocido picado'},
-  {lista:'1 taza de piña en trozos'},
-  {lista:'1/4 taza de salsa BBQ'},
-  {lista:'Hojas de albahaca fresca para decorar (opcional)'}
+      { lista: '500 gramos de harina de trigo'},
+      { lista: '1 cucharadita de sal' },
+      { lista: '325 ml de agua tibia'},
+      { lista: '7 gramos de levadura fresca' },
+      { lista: '400 gramos de tomate triturado'},
+      { lista: '400 gramos de mozzarella fresca'},
+      { lista: '150 gramos de jamón'},
+      { lista: '150 gramos de piña en conserva'},
+      { lista: 'orégano al gusto' },
+    ],
+    contenido:[
+      'En un bol grande, mezcla la harina y la sal. Agrega el agua tibia y la levadura fresca desmenuzada. Mezcla todo con una cuchara de madera hasta que empiece a formarse una masa.',
+      'Amasa la masa sobre una superficie enharinada durante unos 10 minutos, hasta que quede suave y elástica. Coloca la masa en un bol ligeramente engrasado, cúbrelo con un paño húmedo y déjalo reposar durante al menos una hora en un lugar cálido y sin corrientes de aire.',
+      'Precalienta el horno a 250 grados Celsius. Coloca una bandeja de horno en el horno para que se caliente también.',
+      'Divide la masa en dos partes iguales. Estira cada una de las partes con un rodillo hasta que quede fina (alrededor de medio centímetro de grosor). Coloca cada base de pizza sobre papel de horno.',
+      'Extiende el tomate triturado sobre cada base de pizza, asegurándote de que quede bien repartido. Agrega el jamón y la piña en trozos pequeños. Añade la mozzarella cortada en trozos pequeños y espolvorea con orégano.',
+      'Saca la bandeja de horno caliente del horno y coloca una base de pizza sobre ella. Hornea durante unos 10-15 minutos o hasta que la base esté dorada y la mozzarella se haya derretido. Repite con la otra pizza.',
+      'Sirve caliente y disfruta de tu deliciosa pizza hawaiana. ¡Buen provecho!',
     ]
   },
   {
@@ -168,6 +205,17 @@ recetas:[
   {lista:'1 tomate grande maduro picado'},
   {lista:'1 cucharadita de orégano seco'},
   {lista:'Hojas de albahaca fresca para decorar (opcional)'}
+    ],
+    contenido:[
+      'En un bol grande, mezcla la harina y la sal. Agrega el agua tibia y la levadura fresca desmenuzada. Mezcla todo con una cuchara de madera hasta que empiece a formarse una masa.',
+      'Amasa la masa sobre una superficie enharinada durante unos 10 minutos, hasta que quede suave y elástica. Coloca la masa en un bol ligeramente engrasado, cúbrelo con un paño húmedo y déjalo reposar durante al menos una hora en un lugar cálido y sin corrientes de aire.',
+      'Precalienta el horno a 250 grados Celsius. Coloca una bandeja de horno en el horno para que se caliente también.',
+      'En una sartén, calienta el aceite de oliva y agrega el ajo picado y el chile jalapeño sin semillas y cortado en rodajas finas. Sofríe durante unos minutos hasta que el ajo esté dorado y el chile esté suave.',
+      'Corta el tomate en cubos pequeños y reserva.',
+      'Divide la masa en dos partes iguales. Estira cada una de las partes con un rodillo hasta que quede fina (alrededor de medio centímetro de grosor). Coloca cada base de pizza sobre papel de horno.',
+      'Extiende el tomate triturado sobre cada base de pizza, asegurándote de que quede bien repartido. Agrega el pepperoni cortado en rodajas, el sofrito de ajo y chile, y el tomate picado sobre el tomate. Añade la mozzarella cortada en trozos pequeños y espolvorea con orégano.',
+      'Saca la bandeja de horno caliente del horno y coloca una base de pizza sobre ella. Hornea durante unos 10-15 minutos o hasta que la base esté dorada y la mozzarella se haya derretido. Repite con la otra pizza.',
+      'Sirve caliente y disfruta de tu deliciosa pizza de pepperoni con tomate picado y chile. ¡Buen provecho!',
     ]
   }
 ],  
@@ -193,10 +241,16 @@ recetas:[
   {lista:'1 taza de crema de leche'},
   {lista:'1 taza de queso parmesano rallado'},
   {lista:'4 cucharadas de mantequilla sin sal'},
-  {lista:'lidientes de ajo picados'},
+  {lista:'dientes de ajo picados'},
   {lista:'Sal y pimienta negra recién molida'},
   {lista:'Hojas de perejil fresco picado para decorar (opcional)'},
-      ]
+      ],
+      contenido:[ 'Cocinar la pasta en agua con sal según las instrucciones del paquete, hasta que esté al dente. Escurrir y reservar.',
+      'En una sartén grande, derretir la mantequilla a fuego medio. Agregar el ajo picado y cocinar durante un minuto, hasta que esté fragante.',
+      'Agregar la crema de leche y llevar a ebullición, reducir el fuego y cocinar a fuego lento durante unos minutos, hasta que la salsa espese un poco.',
+      'Agregar el queso parmesano rallado y mezclar bien hasta que se derrita y la salsa esté suave. Salpimentar al gusto.',
+      'Agregar la pasta a la sartén con la salsa Alfredo y mezclar bien para cubrir la pasta con la salsa.',
+      'Decorar con hojas de perejil fresco picado y servir caliente.',]
     },
     {
       platillo:"Pasta Italiana",
@@ -219,6 +273,13 @@ recetas:[
   {lista:'1/2 taza de vino tinto'},
   {lista:'1 cucharadita de orégano seco'},
   {lista:'Sal y pimienta negra recién molida'}
+      ],
+      contenido:[
+        'Cocina el spaghetti en agua con sal, siguiendo las instrucciones del paquete, hasta que esté al dente. Escurre y reserva.',
+        'En una sartén grande, calienta el aceite de oliva a fuego medio. Agrega la cebolla picada y el ajo picado y cocina hasta que estén suaves y fragantes.',
+        'Agrega los tomates pelados, el vino tinto, el orégano seco, sal y pimienta negra recién molida. Cocina a fuego lento durante 15-20 minutos, hasta que la salsa se haya espesado.',
+        'Agrega el spaghetti cocido a la sartén con la salsa de tomate y mezcla bien para cubrir la pasta con la salsa.',
+        'Sirve la pasta en platos individuales, espolvorea con queso parmesano rallado y decora con hojas de albahaca fresca si lo deseas.',    
       ]
     },
     {
@@ -227,10 +288,36 @@ recetas:[
       descripcion: "¡Una deliciosa combinación de pasta con albóndigas caseras en una salsa de tomate llena de sabor!",
       valorNutricional: [
         { nombre: "Calorías", cantidad: 550 },
-        { nombre: "Grasas", cantidad: 25 },
-        { nombre: "Proteínas", cantidad: 15 },
-        { nombre: "Carbohidratos", cantidad: 50 }
-      ]
+        { nombre: "Grasas", cantidad: "25g" },
+        { nombre: "Proteínas", cantidad: "15gr" },
+        { nombre: "Carbohidratos", cantidad: "50g" }
+      ],
+      ingredientes:[
+{lista:'500 gramos de carne molida de res'},
+{lista:'1/2 taza de pan rallado'},
+{lista:'1/2 taza de queso parmesano rallado'},
+{lista:'1 huevo'},
+{lista:'2 dientes de ajo picados'},
+{lista:'Sal y pimienta negra recién molida'},
+{lista:'Aceite de oliva para freír'},
+{lista:'2 cucharadas de aceite de oliva'},
+{lista:'1 cebolla picada'},
+{lista:'2 dientes de ajo picados'},
+{lista:'1 lata de tomates pelados (400 gramos)'},
+{lista:'1/2 taza de vino tinto'},
+{lista:'1 cucharadita de orégano seco'},
+{lista:'Sal y pimienta negra recién molida'},
+{lista:'500 gramos de pasta (penne, rigatoni, fusilli, etc.)'},
+{lista:'Queso parmesano rallado para servir'},
+{lista:'Hojas de albahaca fresca para decorar (opcional)'}
+      ],
+      contenido:[   'En un tazón grande, mezcla la carne molida, el pan rallado, el queso parmesano, el huevo, el ajo picado, sal y pimienta negra recién molida hasta que estén bien combinados. Forma pequeñas bolas de carne con tus manos.',
+      'En una sartén grande, calienta aceite de oliva a fuego medio-alto. Agrega las albóndigas y cocina, volteando ocasionalmente, hasta que estén doradas por todos los lados. Retira las albóndigas de la sartén y reserva.',
+      'Para la salsa de tomate: en la misma sartén, agrega 2 cucharadas de aceite de oliva y calienta a fuego medio. Agrega la cebolla picada y el ajo picado y cocina hasta que estén suaves y fragantes.',
+      'Agrega los tomates pelados, el vino tinto, el orégano seco, sal y pimienta negra recién molida. Cocina a fuego lento durante 15-20 minutos, hasta que la salsa se haya espesado.',
+      'Mientras tanto, cocina la pasta en agua con sal según las instrucciones del paquete, hasta que esté al dente.',
+      'Agrega las albóndigas a la sartén con la salsa de tomate y mezcla bien.',
+      'Sirve la pasta en platos individuales y cubre con la salsa de tomate y albóndigas. Espolvorea con queso parmesano rallado y decora con hojas de albahaca fresca si lo deseas.',]
     }
 ],
 
@@ -238,7 +325,22 @@ recetas:[
 
 
 ] 
-
+function previousPagina(){
+  const lista = document.querySelector(".lista-ingredientes");
+  const receta = document.querySelector(".recetaTexto");
+  const contador = document.querySelector(".paginaCounter")
+  contador.innerText = "1/2"
+  receta.style.display = "none";
+  lista.style.display = "block";
+}
+function nextPagina(){
+  const contador = document.querySelector(".paginaCounter")
+  contador.innerText = "2/2"
+  const lista = document.querySelector(".lista-ingredientes");
+  const receta = document.querySelector(".recetaTexto");
+  receta.style.display = "block"
+  lista.style.display ="none";
+}
 function disableEnterKey(event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -284,9 +386,9 @@ document.querySelectorAll(".menu-box").forEach(cajaDeMenu => {
     if (previousCajaDeMenu) {
       previousCajaDeMenu.classList.remove("clicked");
       previousCajaDeMenu.style.removeProperty('transform');
-
-
+      previousPagina();
     }
+    
     hideBar.style.display = "flex"
     cajaDeMenu.classList.add("clicked");
     hideBar.style.display = "flex";
@@ -296,7 +398,7 @@ document.querySelectorAll(".menu-box").forEach(cajaDeMenu => {
         hideBar.style.display = "none";
         articulo.classList.remove("slideInLeft");
         hideBar.style.display = "none";
-      
+        previousPagina();
       })
       articulo.style.display = "block";
       articulo.classList.add("slideInLeft");
@@ -311,7 +413,8 @@ document.querySelectorAll(".menu-box").forEach(cajaDeMenu => {
 
         tabla.innerText = ""
         ingredientes.innerHTML = ""
-  receta.ingredientes.forEach(ingrediente=>{
+        document.querySelector(".recetaTexto").innerHTML=""
+        receta.ingredientes.forEach(ingrediente=>{
     const listaIngredientes = document.querySelector(".lista-ingredientes")
    
     const ingredientesContenido = document.createElement("li")
@@ -327,11 +430,19 @@ document.querySelectorAll(".menu-box").forEach(cajaDeMenu => {
   
     valores.innerText = valor.nombre + ": " + valor.cantidad
     const tituloReceta = document.querySelector(".tituloReceta")
-    tituloReceta.innerText = "Receta Para " + previousCajaDeMenu.firstChild.innerText
+    tituloReceta.innerText = "Preparacion Para " + previousCajaDeMenu.firstChild.innerText
     valorLista.appendChild(valores)
     valores.classList.add("lista-nutricional")
 
   })
+    receta.contenido.forEach(contenidos=>{
+      const escritoReceta = document.querySelector(".recetaTexto")
+      const contenidoReceta = document.createElement("p")
+      
+      contenidoReceta.innerText = contenidos
+      escritoReceta.appendChild(contenidoReceta)
+      contenidoReceta.classList.add("paragrafo")
+      })
  }
     });
 
@@ -358,3 +469,4 @@ document.querySelectorAll(".menu-box").forEach(cajaDeMenu => {
     });
     
   });
+
